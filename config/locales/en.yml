@@ -1,0 +1,43 @@
+en:
+  base:
+    title: "Sun* soccer fields"
+    name: "Soccer Field"
+    location: "Location"
+    cancel: "Cancel"
+  home:
+    name: "Home"
+    address: "Address: "
+    phone: "Number phone: "
+    previous: "Previous"
+    next: "Next"
+    number_fields: "Soccer field number"
+  booking:
+    booking_fields: "Booking"
+    cancel_fields: "Cancel"
+    fields_name: "Fields Name"
+    fields_code: "Fields Code"
+    fields_type: "Fields Type"
+    date: "Date"
+    time: "Time"
+    total: "Total:"
+    delete: "delete"
+    price: "Price"
+  login:
+    name: "Login"
+  detail:
+    choose: "Choose the yard"
+    date: "Date"
+    time: "Time"
+    type: "Type"
+    comment: "Comment"
+    reply: "reply"
+    name: "Detail"
+  district:
+    tk: "Thanh Khe District"
+    st: "Son Tra District"
+    nhs: "Ngu Hanh Son District"
+    lc: "Lien Chieu District"
+    hc: "Hai Chau District"
+    cl: "Cam Le District"
+    hv: "Hoa Vang District"
+    hs: "Hoang Sa Archipelago"

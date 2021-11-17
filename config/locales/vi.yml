@@ -1,0 +1,43 @@
+vi:
+  base:
+    title: "Đặt sân bóng Sun*"
+    name: "Sân bóng đá"
+    location: "Vị trí"
+    cancel: "Hủy bỏ"
+  home:
+    name: "Trang chủ"
+    address: "Địa chỉ: "
+    phone: "Số điện thoại: "
+    previous: "Trước"
+    next: "Sau"
+    number_fields: "Sân bóng số "
+  booking:
+    booking_fields: "Đặt sân"
+    cancel_fields: "Hủy bỏ"
+    fields_name: "Tên sân"
+    fields_code: "Mã sân"
+    fields_type: "Loại sân"
+    date: "Ngày"
+    time: "Thời gian"
+    total_cost: "Tổng cộng:"
+    delete: "Xóa"
+    price: "Giá tiền"
+  login:
+    name: "Đăng nhập"
+  detail:
+    choose: "Chọn sân"
+    date: "Ngày"
+    time: "Thời gian"
+    type: "Loại sân"
+    comment: "Bình luận"
+    reply: "Trả lời"
+    name: "Chi tiết"
+  district:
+    tk: "Quận Thanh Khê"
+    st: "Quận Sơn Trà"
+    nhs: "Quận Ngũ Hành Sơn"
+    lc: "Quận Liên Chiểu"
+    hc: "Quận Hải Châu"
+    cl: "Quận Cẩm Lệ"
+    hv: "Huyện Hoà Vang"
+    hs: "Quần đảo Hoàng Sa"
