@@ -4,16 +4,16 @@
     <title><%= yield(:title) %> | <%= yield(:base_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
-    <%= link_to t("en"), locale: :en %>
-    <%= link_to t("vi"), locale: :vi %>
     <%= render "layouts/header" %>
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <div class="row">
         <%= render "layouts/address" %>
         <%= yield %>

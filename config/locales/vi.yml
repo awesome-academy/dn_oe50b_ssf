@@ -1,4 +1,20 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác Nhận Mật Khẩu"
+  user_controller:
+      create_success: "Tạo Tài Khoản Thành Công"
+      create_fail: "Tạo Tài Khoản Thất Bại"
+      user_not_found: "Không tìm thấy người dùng"
+      check_email: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+  account_activations_controller:
+    account_activate: "Tài khoản đã được kích hoạt!"
+    account_danger: "Liên kết kích hoạt không hợp lệ"
+  user_mailer:
+    activate: "Kích hoạt tài khoản"
   base:
     title: "Đặt sân bóng Sun*"
     name: "Sân bóng đá"
@@ -24,6 +40,8 @@ vi:
     price: "Giá tiền"
   login:
     name: "Đăng nhập"
+  sign_up:
+    name: "Đăng ký"
   detail:
     choose: "Chọn sân"
     date: "Ngày"
@@ -41,3 +59,31 @@ vi:
     cl: "Quận Cẩm Lệ"
     hv: "Huyện Hoà Vang"
     hs: "Quần đảo Hoàng Sa"
+  users:
+    new:
+      title: "Đăng kí"
+      h1: "Đăng kí"
+      confirmation: "Xác Nhận Mật Khẩu"
+      createAccount: "Tạo Tài Khoản"
+  shared:
+    error_messages:
+      contains: The form contains %{errors}
+      error: "error"
+  assession:
+    show: "Không tìm thấy người dùng"
+  sessions:
+    title: "Đăng Nhập"
+    h1: "Đăng Nhập"
+    login: "Đăng Nhập"
+    new_user: "Người dùng mới?"
+    signup: "Đăng ký"
+    remember: "Ghi nhớ mật khẩu"
+    email: "địa chỉ email"
+    password: "Mật Khẩu"
+    or: "Hoặc"
+    facebook: "Đăng nhập bằng Facebook"
+    google: "Đăng nhập bằng  Google"
+  flash:
+    invalid: "Sai email hoặc mật khẩu"
+    warning: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của
+              bạn để biết liên kết kích hoạt."

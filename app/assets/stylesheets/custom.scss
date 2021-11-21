@@ -1,8 +1,15 @@
 @import "bootstrap";
+@import "font-awesome";
 
 $white-color: #fff;
 $blue-light: #47649F;
 $gray: #AFB4BD;
+$white-color:#fff;
+$color-footer:#777;
+$color-footera:#555;
+$color-footer-hover:#222;
+$color-error_explanation: #FF3300;
+$gray-lighter: #D3D3D3;
 
 body {
   padding-top: 56px;
@@ -206,4 +213,172 @@ td:nth-child(2) .box-img {
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
+}
+
+/* universal */
+body {
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color:$white-color;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: $white-color;
+  text-decoration: none;
+}
+
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $white-color;
+  color: $color-footer;
+}
+footer a {
+  color: $color-footera;
+}
+footer a:hover {
+  color: $color-footer-hover;
+}
+footer small {
+  float: left;
+}
+footer ul {
+  float: right;
+  list-style: none;
+}
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* mixins, variables, etc. */
+$gray-medium-light: $white-color;
+@mixin box_sizing {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1 px solid $color-footer;
+  width: 100% ;
+  margin-bottom: 15 px;
+  @include box_sizing;
+}
+input {
+  height: auto!important;
+}
+#error_explanation {
+  color: $color-error_explanation;
+  ul {
+    color: $color-error_explanation;
+    margin: 0 0 30 px 0;
+  }
+}
+
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 10;
+  li {
+    overflow: auto;
+    margin: 10px ;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.btn.btn-primary{
+  margin-top: 10px;
+}
+
+/* sidebar */
+aside {
+  section.user_info {
+  margin-top: 20px;
+  width: 100px;
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+    &:first-child {
+    border: 0;
+    padding-top: 0;
+    }
+    span {
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+    }
+    h1 {
+    font-size: 1.4em;
+    text-align: left;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: right;
+  margin-right: 10px;
+}
+.gravatar_edit {
+  margin-top: 15px;
 }

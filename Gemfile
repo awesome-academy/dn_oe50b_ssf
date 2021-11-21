@@ -3,8 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem "validates_timeliness", "~> 6.0.0.alpha1"
 gem "bootstrap", "~> 4.5.0"
 gem "execjs"
+gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.5"
 gem "jquery-rails"
 gem "bcrypt", "3.1.13"
 gem "faker"
