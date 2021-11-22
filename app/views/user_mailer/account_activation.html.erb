@@ -1,0 +1,8 @@
+<h1>Sun Soccer Field</h1>
+<p>Hi <%= @user.email %>,</p>
+<p>
+Welcome to the Sun Soccer Field Click on the link below to activate your
+account:
+</p>
+<%= link_to "Activate", edit_account_activation_url(id:
+@user.activation_token, email: @user.email) %>
