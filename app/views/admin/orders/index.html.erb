@@ -45,7 +45,7 @@
                       <%= order&.user.phone %></h5>
                     <h5>
                       <%= t("booking.detail_booking.field") %>
-                      <%=order&.soccer_field_field_name %></h5>
+                      <%= order&.soccer_field_field_name %></h5>
                     <h5>
                       <%= t("booking.detail_booking.time") %>
                       <%= order&.order_detail_booking_used %></h5>
@@ -55,8 +55,12 @@
                   </div>
                   <div class="modal-footer">
                     <% if order.pending? %>
-                      <%= button_tag t("booking.detail_booking.btn_submit"), type: "button", class: "btn btn-primary" %>
-                      <%= button_tag t("booking.detail_booking.btn_cancel"), type: "button", class: "btn btn-danger" %>
+                      <%= button_tag t("booking.detail_booking.btn_submit"),
+                      type: "button", class: "btn btn-primary handle-request-order",
+                      data: {id: "#{order.id}", stt: "accept"} %>
+                      <%= button_tag t("booking.detail_booking.btn_cancel"),
+                      type: "button", class: "btn btn-danger handle-request-order",
+                      data: {id: "#{order.id}", stt: "rejected"} %>
                     <% end %>
                     <%= button_tag t("booking.detail_booking.btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
                   </div>
@@ -73,3 +77,4 @@
     <%= will_paginate @orders %>
   </div>
 </div>
+<%= javascript_pack_tag "handle_request_order" %>

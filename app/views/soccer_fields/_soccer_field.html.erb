@@ -3,7 +3,7 @@
     <%= image_tag ( "/assets/anh03.jpg"),class: "card-img-top" %>
     <div class="card-body">
       <h4 class="card-title">
-        <%= link_to soccer_field.field_name, detail_path %>
+        <%= link_to soccer_field.field_name, static_page_path(id: soccer_field.id) %>
       </h4>
       <p><%= t "booking.soccer_status" %> :<%= soccer_field.status %></p>
       <h6><%= t "booking.soccer_type" %> :<%= soccer_field.type_field %></h6>

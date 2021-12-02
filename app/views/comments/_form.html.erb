@@ -1,0 +1,15 @@
+<div class="widget-area no-padding blank">
+  <div class="status-upload">
+    <% if logged_in? %>
+      <%= form_for @comment  do |f| %>
+        <%= f.hidden_field :soccer_field_id, value: @soccer_field.id %>
+        <%= f.text_area :content, placeholder: t("detail.chat"),required: true %>
+        <%= f.submit t("detail.comment"), class: "btn btn-success green" %>
+      <% end %>
+    <% else %>
+      <p> <%= t "login.name" %>:
+        <%= link_to t("login.click"),login_path %>
+      </p>
+    <% end %>
+  </div>
+</div>

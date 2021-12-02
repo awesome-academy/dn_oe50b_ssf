@@ -1,0 +1,14 @@
+<% provide(:title, t("menu_manager.booking_field")) %>
+<% provide(:base_title, t("base.title")) %>
+<div class="col-lg-9">
+  <table class="table">
+    <%= render "layouts/title" %>
+    <tbody>
+      <%= render @orders %>
+    </tbody>
+  </table>
+  <!-- Title -->
+  <div class="d-flex justify-content-center">
+    <%= will_paginate @orders %>
+  </div>
+</div>

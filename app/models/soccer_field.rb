@@ -1,6 +1,7 @@
 class SoccerField < ApplicationRecord
   has_many :order_details, dependent: :destroy
   has_many :soccer_rates, dependent: :destroy
+  has_many :comments, dependent: :destroy
   scope :order_by_field_name, ->{order :field_name}
   validates :field_name, length:
                          {maximum: Settings.model.profile.name_length_max_50},

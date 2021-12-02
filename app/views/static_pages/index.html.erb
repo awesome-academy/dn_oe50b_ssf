@@ -1,0 +1,9 @@
+<% provide(:title, t("home.name")) %>
+<% provide(:base_title, t("base.title")) %>
+<div class="col-lg-9">
+  <%= render "slide" %>
+  <div class="row">
+    <%= render @soccer_fields%>
+  </div>
+  <%= will_paginate @soccer_fields %>
+</div>

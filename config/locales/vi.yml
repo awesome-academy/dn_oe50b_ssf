@@ -7,6 +7,16 @@ vi:
         email: "Địa chỉ email"
         password: "Mật khẩu"
         password_confirmation: "Xác Nhận Mật Khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "email đã tồn tại"
+            phone:
+              invalid: "Số điện thoại không đúng định dạng"
+            password_confirmation:
+              confirmation: "Mật khảu không được trùng"
   application:
     check_admin:
       warning: "Bạn không phải quản trị viên!"
@@ -31,6 +41,9 @@ vi:
     message:
       pls_login: "Bạn phải đăng nhập để sử dụng hệ thống."
       is_admin: "Bạn không phải là quản trị viên nên bạn không thể sử dụng chức năng này."
+  comment_controller:
+    success: "Cảm ơn, bình luận của bạn"
+    fail: "Không thể thực hiện yêu cầu, thử lại"
   application_controller:
     log_in:
       danger: "Xin vui lòng đăng nhập !"
@@ -96,6 +109,9 @@ vi:
     new_h1_html: "Thêm Sân Bóng"
     edit_h1_html: "Cập nhật Sân bóng đá"
     comfirm_delete: "Bạn chắc chắn"
+    update_booking:
+      not_exist_id: "Không tìm thấy id sân"
+      update_sucess: "Xử lý sân thành công"
     detail_booking:
       detail: "Chi tiết đặt sân"
       status: "Trạng thái:"
@@ -124,8 +140,13 @@ vi:
       type: "Loại Sân"
       time: "Khung giờ"
       code: "Mã Sân"
+    update_booking:
+      not_exist_id: "Không tìm thấy id đơn hàng"
+      update_sucess: "Xử lý đơn hàng thành công"
+      update_fail: "Xử lý đơn hàng thất bại"
   login:
     name: "Đăng nhập"
+    click: "Nhấp vào đây"
   sign_up:
     name: "Đăng ký"
   detail:
@@ -133,9 +154,11 @@ vi:
     date: "Ngày"
     time: "Thời gian"
     type: "Loại sân"
-    comment: "Bình luận"
+    chat: "Bình luận..............."
     reply: "Trả lời"
     name: "Chi tiết"
+    comment: "Cảm ơn, bình luận của bạn"
+    reply: "Trả lời"
   district:
     tk: "Quận Thanh Khê"
     st: "Quận Sơn Trà"
@@ -186,7 +209,7 @@ vi:
       success: "Cập nhật người dùng thành công"
       danger: "Cập nhật người dùng thất bại!"
     create:
-      info: "Tạo người dùng thành công"
+      info: "Vui long kiem tra tai khoan mail cua ban"
       warning: "Tạo tài khoản thất bại"
     correct_user:
       danger: "Sai người dùng!"
@@ -211,10 +234,10 @@ vi:
     or: "Hoặc"
     facebook: "Đăng nhập bằng Facebook"
     google: "Đăng nhập bằng  Google"
-  create:
-    invalid: "Sai email hoặc mật khẩu"
-  check_activated:
-    warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
+    create:
+      invalid: "Sai email hoặc mật khẩu"
+    check_activated:
+      warning: "Tài khoản chưa kích hoạt. Kiểm tra email để kích hoạt tài khoản."
   form:
     session:
       password: "Mật khẩu"

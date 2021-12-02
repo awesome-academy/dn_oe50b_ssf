@@ -1,9 +1,9 @@
-class CreateSoccerRates < ActiveRecord::Migration[6.1]
+class CreateComments < ActiveRecord::Migration[6.1]
   def change
-    create_table :soccer_rates do |t|
+    create_table :comments do |t|
       t.references :user, null: false, foreign_key: true
       t.references :soccer_field, null: false, foreign_key: true
-      t.integer :rate
+      t.string :content
 
       t.timestamps
     end

@@ -2,11 +2,17 @@ en:
   eng: "English"
   vie: "Vietnam"
   activerecord:
-    attributes:
-      user:
-        email: "Email address"
-        password: "Password"
-        password_confirmation: "Password Confirmation"
+      attributes:
+        user:
+          email: "Email address"
+          password: "Password"
+          password_confirmation: "Password Confirmation"
+      errors:
+        models:
+          user:
+            attributes:
+              password_confirmation:
+                confirmation: "Unmatched password"
   application:
     check_admin:
       warning: "You not admin!"
@@ -31,6 +37,9 @@ en:
     message:
       pls_login: "You must be logged in to use the system."
       is_admin: "You are not an admin so you cannot use this function."
+  comment_controller:
+    success: "Thank, your comment"
+    fail: "Unable to execute request, try again"
   application_controller:
     log_in:
       danger: "Please login !"
@@ -96,6 +105,9 @@ en:
     new_h1_html: "Add Soccer Field"
     edit_h1_html: "Update Soccer Field"
     comfirm_delete: "Are you sure ?"
+    update_booking:
+      not_exist_id: "Order id not found!"
+      update_sucess: "Order processing successfully!"
     detail_booking:
       detail: "Detail booking"
       status: "Status:"
@@ -124,8 +136,13 @@ en:
       type: "Type Field"
       time: "Time"
       code: "Code Soccer Field"
+    update_booking:
+      not_exist_id: "Order id not found!"
+      update_sucess: "Order processing successfully!"
+      update_fail: "Order processing failed!"
   login:
     name: "Login"
+    click: "Click here"
   sign_up:
     name: "Register"
   detail:
@@ -133,9 +150,11 @@ en:
     date: "Date"
     time: "Time"
     type: "Type"
-    comment: "Comment"
+    chat: "Comment..............."
     reply: "reply"
     name: "Detail"
+    comment: "Thank, your comment"
+    reply: "reply"
   district:
     tk: "Thanh Khe District"
     st: "Son Tra District"
@@ -186,7 +205,7 @@ en:
       success: "Update user successed"
       danger: "Update user failed"
     create:
-      info: "Create Success"
+      info: "Please checkout mail"
       warning: "Create Account Failed"
     correct_user:
       danger: "Wrong user!"
@@ -211,10 +230,10 @@ en:
     or: "OR"
     facebook: "Sign in with Facebook"
     google: "Sign in with Google"
-  create:
-    invalid: "Invalid email/password combination"
-  check_activated:
-    warning: "Account not activated. Check your email for the activation link."
+    create:
+      invalid: "Invalid email/password combination"
+    check_activated:
+      warning: "Account not activated. Check your email for the activation link."
   form:
     session:
       password: "Password"
