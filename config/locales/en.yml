@@ -33,9 +33,6 @@ en:
   account_activations_controller:
     account_activate: "Account activated!"
     account_danger: "Invalid activation link"
-  message:
-      pls_login: "You must be logged in to use the system."
-      is_admin: "You are not an admin so you cannot use this function."
   comment_controller:
     success: "Thank, your comment"
     fail: "Unable to execute request, try again"

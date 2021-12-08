@@ -33,9 +33,6 @@ vi:
   account_activations_controller:
     account_activate: "Tài khoản đã được kích hoạt!"
     account_danger: "Liên kết kích hoạt không hợp lệ"
-  message:
-      pls_login: "Bạn phải đăng nhập để sử dụng hệ thống."
-      is_admin: "Bạn không phải là quản trị viên nên bạn không thể sử dụng chức năng này."
   comment_controller:
     success: "Cảm ơn, bình luận của bạn"
     fail: "Không thể thực hiện yêu cầu, thử lại"
