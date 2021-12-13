@@ -27,7 +27,6 @@ gem "i18n-js"
 
 group :development, :test do
   gem "factory_bot_rails"
-  gem "shoulda-matchers", "~> 4.0"
   gem "rspec-rails", "~> 4.0.1"
   gem "simplecov-rcov"
   gem "simplecov"
