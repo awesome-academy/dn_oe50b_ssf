@@ -17,8 +17,10 @@ Rails.application.routes.draw do
     resources :comments, only: %i(create)
     namespace :admin do
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"
+      get "search_revenue", to: "revenues#search_revenue"
       resources :soccer_fields, except: %i(show)
       resources :orders, only: %i(index update)
+      resources :revenues, only: :index
     end
     namespace :user do
       resources :orders

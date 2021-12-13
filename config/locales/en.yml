@@ -233,6 +233,7 @@ en:
         type: "Type : "
         btn_handle: "Pending"
         btn_cancelled: "Cancelled"
+        btn_accepted: "Accepted"
         btn_exit: "Exit"
         btn_delete: "Delete"
         btn_cancel: "Cancel"
@@ -366,6 +367,19 @@ en:
       hours: "hours"
       text_body: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
   admin:
+    revenues:
+      index:
+        date: "Select date"
+        title: "Revenue of soccer field"
+        search_date: "Search"
+      search_revenue:
+        title: "Revenue of day"
+        number: "Ordinal number"
+        user_name: "User name"
+        quantity: "Quantity"
+        price: "Price"
+        sum_cost: "Total cost"
+        danger: "No sales for this day"
     manager_title: "Manager Soccer Fields Sun*"
     manager_booking_field: "Manager booking field"
     manager_user: "Manager user"

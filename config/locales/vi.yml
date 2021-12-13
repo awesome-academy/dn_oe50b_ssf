@@ -235,6 +235,7 @@ vi:
         type: "Loại sân : "
         btn_handle: "Chờ xử lý"
         btn_cancelled: "Đơn hủy"
+        btn_accepted: "Đã đồng ý"
         btn_exit: "Thoát"
         btn_delete: "Xóa đơn"
         btn_cancel: "Hủy đơn"
@@ -367,6 +368,19 @@ vi:
       hours: "giờ"
       text_body: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ."
   admin:
+    revenues:
+      index:
+        date: "Chọn ngày"
+        title: "Doanh thu sân bóng"
+        search_date: "Tìm ngày"
+      search_revenue:
+        title: "Doanh thu của ngày"
+        number: "Số thứ tự"
+        user_name: "Tên khách hàng"
+        quantity: "Số lượng"
+        price: "Giá"
+        sum_cost: "Tổng tiền"
+        danger: "Không có doanh thu của ngày này"
     manager_title: "Quản lý Sân bóng Sun*"
     manager_booking_field: "Quản lý đơn đặt sân"
     manager_user: "Quản lý người dùng"

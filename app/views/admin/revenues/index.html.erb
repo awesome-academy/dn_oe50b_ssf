@@ -1,0 +1,9 @@
+<% provide :title, t(".title") %>
+<div class="col-lg-9">
+  <h1><%= t ".title" %></h1>
+  <%= form_tag admin_search_revenue_path,method: :get do %>
+    <label><%= t ".date" %>:</label>
+    <%= date_field_tag :date, val_date() %>
+    <%= submit_tag t(".search_date"), class: "btn-info" %>
+  <% end %>
+</div>

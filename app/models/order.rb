@@ -13,12 +13,11 @@ class Order < ApplicationRecord
 
   scope :status_asc, ->{order status: :asc}
   scope :date_desc, ->{order created_at: :desc}
-  scope :find_date_order, (lambda do |order_detail_ids, date|
-    where(
-      "order_detail_id IN (?) AND order_date = ? AND status = ? OR status = ?",
-      order_detail_ids, date, Order.statuses[:accept], Order.statuses[:pending]
-    )
+  scope :find_date_accept, (lambda do |date|
+    where("created_at LIKE ? AND status = ?", "%#{date}%",
+          Order.statuses[:accept])
   end)
+  scope :find_sum_day, ->{group(:status).sum(:total_cost)}
 
   def update_status status
     update_column(:status, status)

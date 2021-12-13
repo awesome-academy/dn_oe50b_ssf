@@ -1,0 +1,36 @@
+<% provide :title, t(".title") %>
+<div class = "col-md-9 pt-4">
+  <table class="table">
+    <h2 class="text-center pt-4 pb-4 font-weight-bold" >
+      <%= t ".title" %> : <%= params[:date].to_date %>
+    </h2>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">
+          <%= t ".number" %>
+        </th>
+        <th scope="col">
+          <%= t ".user_name" %>
+        </th>
+        <th scope="col">
+          <%= t ".quantity" %>
+        </th>
+        <th scope="col">
+          <%= t ".price" %>
+        </th>
+      </tr>
+    </thead>
+    <% @orders_by_date.each_with_index do |date, index|%>
+      <tr class="table">
+        <td><%= index %></td>
+        <td><%= date.user.name %></td>
+        <td><%= date.quantity %></td>
+        <td><%= date.total_cost %></td>
+      </tr>
+    <%end%>
+    <tr>
+      <td colspan="3" class = "font-weight-bold"><%= t ".sum_cost" %>:</td>
+      <td class = "btn-success font-weight-bold"><%= @total.values[0] %> VND</td>
+    </tr>
+  </table>
+</div>

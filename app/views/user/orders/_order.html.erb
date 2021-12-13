@@ -5,7 +5,9 @@
   <td><%= l(order.created_at, format: :short) %></td>
   <td>
     <% if order.pending? %>
-      <%= button_tag (t(".btn_handle")), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
+      <%= button_tag t(".btn_handle"), type: "button", class: "btn btn-danger", data: {toggle: "modal", target: "#model#{order.id}"} %>
+    <% elsif order.accept?  %>
+      <%= button_tag t(".btn_accepted"), type: "button", class: "btn btn-success", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% else %>
       <%= button_tag t(".btn_cancelled"), type: "button", class: "btn btn-primary", data: {toggle: "modal", target: "#model#{order.id}"} %>
     <% end %>
@@ -50,7 +52,7 @@
                 <p>--------------------*****--------------------</p>
               </h5>
               <h5>
-                <% if order.pending? %>
+                <% if order.pending? && order.quantity > 1 %>
                   <%= button_tag t(".detele_order_detail"),type: "button",
                     class: "btn btn-danger handle-delete-order-detail",
                     data: {id: "#{order_detail.id}", dismiss: "modal"} %>
@@ -63,6 +65,8 @@
               <%= button_tag t(".btn_cancel"),type: "button", class: "btn btn-danger handle-order-user",
                 data: {id: "#{order.id}", stt: "cancel", dismiss: "modal"} %>
                <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
+            <% elsif order.accept?%>
+              <%= button_tag t(".btn_exit"), type: "button", class: "btn btn-secondary", data: {dismiss: "modal"} %>
             <% else %>
               <%= button_tag t(".btn_delete"),type: "button",class: "btn btn-danger handle-delete-order",
                 data: {id: "#{order.id}", dismiss: "modal"} %>
