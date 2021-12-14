@@ -1,9 +1,9 @@
-class Admin::SoccerFieldsController < ApplicationController
+class Admin::SoccerFieldsController < AdminController
   before_action :load_soccer_field, only: %i(edit update destroy)
   def index
     @soccer_fields = SoccerField.order_by_field_name
                                 .paginate(page: params[:page],
-                                          per_page: Settings.paginate.manage)
+                                          per_page: Settings.paginate.per_page)
   end
 
   def new
