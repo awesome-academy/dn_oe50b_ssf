@@ -1,5 +1,5 @@
 <%= form_for([:admin, @soccer_field]) do |l|%>
-  <%= render "shared/error_messages.html.erb", object: l.object %>
+  <%= render "shared/error_messages", object: l.object %>
   <%= l.label :field_name, t("booking.field_name") %>
   <%= l.text_field :field_name, class: "form-control" %>
 

@@ -37,7 +37,6 @@ group :development, :test do
   gem "rubocop-rails", "~> 2.3.2", require: false
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry"
-  gem "shoulda-matchers", "~> 4.0"
 end
 
 group :development do
