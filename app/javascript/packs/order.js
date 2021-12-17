@@ -1,3 +1,6 @@
+// import I18n from "i18n-js"
+// I18n.translations = <%= I18n::JS.filtered_translations.to_json %>;
+// export default I18n
 function handle_order(date,id_order_detail){
   var token = $('meta[name="csrf-token"]').attr('content')
   $.ajax({
