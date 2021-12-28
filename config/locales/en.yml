@@ -466,6 +466,7 @@ en:
       short: "%H:%M"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  date_time_format: "%m/%d/%Y %H:%M:%S"
   alert:
     add_to_cart:
       fail: "Add to cart FAIL!"
@@ -496,3 +497,8 @@ en:
     month: "Users Register By Month Of Each Year"
     quarter: "Users Register By Quarter Of Each Year"
     year: "Users Register Every Year"
+  notification:
+    title_ad: " booking soccer field"
+    at_time: "at"
+    content_ad: "Please go to order manager to approve"
+    show: "Show notification"

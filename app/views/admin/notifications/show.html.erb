@@ -1,0 +1,12 @@
+<div id="content">
+  <div class="container-fluid">
+    <div class="row">
+      <h3><%= @notification.title %></h3>
+      <h6>
+        <%= t "order.at_time" %>
+        <%= @notification.created_at.strftime("%m/%d/%Y %H:%M:%S") %>
+      </h6>
+      <p><%= @notification.content %></p>
+    </div>
+  </div>
+</div>

@@ -23,8 +23,20 @@
               </p>
             <% end %>
           </div>
+          <div class="dropdown">
+            <%= link_to "#", class: "mr-2 btn btn-secondary", "data-toggle": "dropdown" do %>
+              <i class="fa fa-bell rgtspace-5"></i>
+               <span class="btn-badge btn-badge--red">
+                  <%= current_user.notifications.unchecked %>
+               </span>
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu pre-scrollable">
+              <%= render current_user.notifications.sort_by_created %>
+            </ul>
+          </div>
           <div class="dropdown show">
-          <%= link_to "#", {class: "btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
+          <%= link_to "#", {class: "ml-2 btn btn-secondary dropdown-toggle", data: {toggle: "dropdown"}} do %>
             <%= t ".account" %>
             <b class="caret"></b>
           <% end %>

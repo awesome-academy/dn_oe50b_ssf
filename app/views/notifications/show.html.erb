@@ -1,0 +1,9 @@
+<% provide :title, t("notification.show") %>
+<div class = "col-md-9 mt-3"
+  <h3><%= @notification.title %></h3>
+  <h6>
+    <%= t "notification.at_time" %>
+    <%= @notification.created_at.strftime(t"date_time_format") %>
+  </h6>
+  <p><%= @notification.content %></p>
+</div>
