@@ -32,3 +32,6 @@ rspec:
 banner:
   lock: "lock"
   unlock: "unlock"
+time_zone:
+  vietnam: "Asia/Ho_Chi_Minh"
+  japan: "Asia/Tokyo"

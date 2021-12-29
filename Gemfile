@@ -36,6 +36,8 @@ gem "cancancan"
 gem "ransack"
 gem "chartkick"
 gem "groupdate"
+gem "whenever", require: false
+gem "bootstrap-datepicker-rails"
 
 group :development, :test do
   gem "factory_bot_rails"

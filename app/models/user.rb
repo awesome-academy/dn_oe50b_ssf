@@ -1,12 +1,11 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  #  :timeoutable, :trackable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable, :lockable,
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :notifications, foreign_key: :recipient_id, dependent: :destroy
 
   before_save :downcase_email
   ransack_alias :user, :name_or_email_or_phone

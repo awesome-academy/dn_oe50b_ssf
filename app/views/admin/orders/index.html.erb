@@ -15,7 +15,7 @@
         <td><img src="/assets/anh01.jpeg" alt="San1" class="img-booking"></td>
         <td><%= order.quantity %></td>
         <td><%= order.total_cost %></td>
-        <td> <%= order.created_at.strftime( t("date_format")) %></td>
+        <td> <%= l(order.created_at, format: :short) %></td>
         <td><%= order.user.name %></td>
         <td><%= render_booking_button order, order.pending? %></td>
     <!-- Button handle order -->

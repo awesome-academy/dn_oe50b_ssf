@@ -454,6 +454,7 @@ vi:
     booking_field: "Quản lý đặt sân"
   date_format: "%d/%m/%Y"
   time_format: "%k:%M"
+  date_time_format: "%m/%d/%Y %H:%M:%S"
   date:
     formats:
       default: "%d/%m/%Y"
@@ -495,3 +496,8 @@ vi:
     month: "Người Dùng Đăng Ký Theo Tháng Mỗi Năm"
     quarter: "Người Dùng Đăng Ký Theo Quý Mỗi Năm"
     year: "Người Dùng Đăng Ký Hằng Năm"
+  notification:
+    title_ad: " đã đặt sân bóng"
+    title_remind: "Thông báo người dùng đang chờ phê duyệt"
+    at_time: "vào ngày"
+    content_ad: "Vui lòng vào quản lý đơn đặt sân để phê duyệt!"

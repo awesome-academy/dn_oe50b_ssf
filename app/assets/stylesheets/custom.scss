@@ -3,11 +3,13 @@
 $white-color: #fff;
 $blue-light: #47649F;
 $gray: #AFB4BD;
-$white-color:#fff;
 $color-footer:#777;
 $color-footera:#555;
 $color-footer-hover:#222;
 $color-error_explanation: #FF3300;
+$color_red: #f00;
+$color_green: #65c931;
+$color_silver: #C0C0C0;
 $gray-lighter: #D3D3D3;
 
 body {
@@ -619,4 +621,34 @@ input {
 .card-total
 {
   width: 100%;
+}
+
+// Notification
+.btn-badge {
+  color: $white_color;
+  font-size: 10px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 8px;
+  border-radius: 15px;
+}
+.btn-badge--red {
+  background: $color_red;
+}
+.noti-li{
+  padding: 10px 0px 3px 5px;
+  margin-left: 11px;
+  margin-top: 5px;
+  height: 57px;
+  width: 162px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+.not-read {
+  background-color: $color_green;
+}
+.seen {
+  background-color: $color_silver;
 }
