@@ -11,6 +11,8 @@ class Ability
       can :manage, Comment
       can %i(read create update order_soccer_field), [Order]
       can [:destroy], OrderDetail
+      can :manage, Notification
+      can :manage, Rating
     end
 
     can :manage, :all if user&.admin?
