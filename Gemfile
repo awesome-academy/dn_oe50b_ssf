@@ -36,6 +36,12 @@ gem "cancancan"
 gem "ransack"
 gem "chartkick"
 gem "groupdate"
+gem "whenever", require: false
+gem "bootstrap-datepicker-rails"
+gem "active_model_serializers", "~> 0.10.12"
+gem "simple_token_authentication"
+gem "jwt"
+gem "rack-cors"
 
 group :development, :test do
   gem "factory_bot_rails"

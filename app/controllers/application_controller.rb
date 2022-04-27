@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include CartsHelper
 
   before_action :set_locale, :set_search
+  protect_from_forgery with: :exception
 
   rescue_from CanCan::AccessDenied do |_exception|
     if user_signed_in?
@@ -39,7 +40,5 @@ class ApplicationController < ActionController::Base
     return unless params[:q]
 
     return if @q.result.any?
-
-    flash[:info] = t "search.info"
   end
 end

@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
+
+  namespace :api do
+    namespace :v1 do
+      resources :soccer_fields
+      devise_scope :user do
+        post "sign_up", to: "registrations#create"
+        post "sign_in", to: "sessions#create"
+        delete "sign_out", to: "sessions#destroy"
+      end
+    end
+  end
+
   devise_for :users, only: :omniauth_callbacks,
               controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
+
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#index"
     get "/home", to: "static_pages#index"
@@ -17,9 +30,12 @@ Rails.application.routes.draw do
     resources :account_activations, only: :edit
     resources :carts
     resources :password_resets, only: %i(new create edit update)
-    resources :static_pages, only: %i(index show)
+    resources :static_pages, only: %i(index show) do
+      resources :ratings, only: %i(index create)
+    end
     resources :carts
     resources :comments, only: %i(create)
+    resources :notifications
 
     namespace :admin do
       get "/soccer_field_path/:id", to: "soccer_fields#destroy"

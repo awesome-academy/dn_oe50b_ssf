@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module DnOe50bSsf
   class Application < Rails::Application
+    config.time_zone = 'Asia/Ho_Chi_Minh'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
@@ -22,5 +23,6 @@ module DnOe50bSsf
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :vi
     config.action_controller.default_protect_from_forgery = false # unless ENV["RAILS_ENV"] == "production"
+    config.autoload_paths << "lib"
   end
 end
